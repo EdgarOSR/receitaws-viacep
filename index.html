@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Titulo e Tags -->
+        <title>Obtendo valores de APIs</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.85">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <!-- Icone Pagina -->
+        <link rel="shortchut icon" href="https://www.svgrepo.com/show/354539/web.svg"/>
+    </head>
+    <body class="container">
+        <div id="formulario" class="container">
+            <form method="get" action=".">
+                <fieldset>
+                    <legend>Dados Cliente</legend><hr>
+                    <label for="cnpj">Cnpj</label>
+                    <input id="cnpj" type="text" maxlength="14" size="18" onblur="validarCnpj(this.value)" data-mask="00.000.000/0000-00"/>
+                    <input id="btnCnpj" type="button" onclick="validarCnpj(cnpj.value)" value="Consultar Cnpj" /><br/>
+                    <label for="nome">Nome</label>
+                    <input id="nome" type="text" maxlength="60" size="60" disabled /><br/>
+                    <label for="abertura">Abertura</label>
+                    <input id="abertura" type="text" size="10" disabled /><br/>
+                    <label for="cep">Cep</label>
+                    <input id="cep" type="text" maxlength="8" size="8" onblur="validarCep(this.value)" data-mask="00.000-000" />
+                    <input id="btnCep" type="button" onclick="validarCep(cep.value)" value="Consultar Cep" /><br/>
+                    <label for="logradouro">Logradouro</label>
+                    <input id="logradouro" type="text" maxlength="60" size="60" disabled /><br/>
+                    <label for="bairro">Bairro</label>
+                    <input id="bairro" type="text" maxlength="40" size="40" disabled /><br/>
+                    <label for="localidade">Município</label>
+                    <input id="localidade" type="text" maxlength="40" size="40" disabled /><br/>
+                    <label for="uf">UF</label>
+                    <input id="uf" type="text" maxlength="2" size="2" disabled /><br/>
+                    <label for="ibge">Cód. Ibge</label>
+                    <input id="ibge" type="text" maxlength="7" size="7" disabled /><br/>
+                    <label for="ddd">DDD</label>
+                    <input id="ddd" type="text" maxlength="2" size="2" disabled /><br/>
+                    <label for="telefone">Telefone</label>
+                    <input id="telefone" type="text" maxlength="10" size="9" placeholder="12345-6789" onblur="validarTelefone(telefone.value)" /><br/>
+                </fieldset>
+            </form>
+        </div>
+        <footer>
+            <div id="mensagem" class="container">
+                <hr>
+                <span id="info" class="text-secondary">2021 (C) Edgar Santa Rosa</span>
+            </div>
+        </footer>
+        <!-- JS -->
+        <!-- <script type="text/javascript" src="script.js"></script> -->
+        <script type="text/javascript" src="apiviacep.js"></script>
+        <script type="text/javascript" src="apireceitaws.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    </body>
+</html>
