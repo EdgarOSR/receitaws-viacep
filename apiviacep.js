@@ -2,8 +2,10 @@ function limpaDadosCep()
 {
     document.getElementById('cep').value = "";
     document.getElementById('logradouro').value = "";
+    document.getElementById('numero').value = "";
+    document.getElementById('complemento').value = "";
     document.getElementById('bairro').value = "";
-    document.getElementById('municipio').value = "";
+    document.getElementById('localidade').value = "";
     document.getElementById('uf').value = "";
     document.getElementById('ibge').value = "";
     document.getElementById('ddd').value = "";
